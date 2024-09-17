@@ -1,4 +1,60 @@
 .Weather {
-  border: solid 1px;
-  width: 750px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px #41326414;
+  color: #878787;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  padding: 35px;
+}
+.Weather .form-input {
+  background: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  color: #27214266;
+  font-size: 16px;
+  height: 50px;
+  line-height: 20px;
+  padding: 15px 20px;
+  width: 410px;
+}
+
+.Weather .form-button {
+  background: #885df1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  height: 50px;
+  width: 120px;
+  margin-left: 60px;
+}
+
+.Weather .temperature {
+  font-size: 96px;
+  font-weight: bold;
+  color: black;
+}
+.Weather .unit {
+  color: black;
+  font-size: 28px;
+
+  line-height: 1;
+  position: relative;
+  top: -34px;
+}
+
+.Weather ul {
+  margin: 0px;
+  padding-left: 0px;
+  list-style: none;
+}
+
+.Weather .form {
+  display: inline;
+}
+
+.Weather .humidity,
+.Weather .windspeed {
+  color: rgb(246, 82, 130);
 }
