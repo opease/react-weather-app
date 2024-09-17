@@ -4,7 +4,7 @@
   box-shadow: 0 30px 50px #41326414;
   color: #878787;
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
-  padding: 35px;
+  padding: 35px 35px 20px;
 }
 .Weather .form-input {
   background: #f9f7fe;
@@ -57,4 +57,14 @@
 .Weather .humidity,
 .Weather .windspeed {
   color: rgb(246, 82, 130);
+}
+
+.Weather span.icon {
+  font-size: 62px;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
 }
