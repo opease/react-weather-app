@@ -31,7 +31,7 @@
 }
 
 .Weather .temperature {
-  font-size: 96px;
+  font-size: 86px;
   font-weight: bold;
   color: black;
 }
@@ -60,7 +60,7 @@
 }
 
 .Weather span.icon {
-  font-size: 62px;
+  font-size: 52px;
 }
 
 footer {

@@ -3,13 +3,14 @@ import "./Weather.css";
 import axios from "axios";
 
 export default function Weather(props) {
-  let [weatherData, setweatherData] = useState({ ready: false });
+  let [weatherData, setweatherData] = useState({});
+  let [ready, setReady] = useState(false);
 
   function handleResponse(response) {
     console.log(response.data);
+    setReady(true);
 
     setweatherData({
-      ready: true,
       temperature: response.data.temperature.current,
       city: response.data.city,
       humidity: response.data.temperature.humidity,
@@ -20,7 +21,7 @@ export default function Weather(props) {
     });
   }
 
-  if (weatherData.ready) {
+  if (ready) {
     return (
       <div className="Weather">
         <form>
@@ -35,7 +36,9 @@ export default function Weather(props) {
           <div className="col-7 mt-4">
             <h1>{weatherData.city}</h1>
             <ul>
-              <li>Sunday 12:52, {weatherData.description}</li>
+              <li className="text-capitalize">
+                Sunday 12:52, {weatherData.description}
+              </li>
               <li>
                 Humidity:{" "}
                 <span className="humidity">{weatherData.humidity}%</span>, Wind:{" "}
@@ -82,9 +85,8 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let city = "Harare";
     let apiKey = "1a3fca45557083c6198e4bt6d7cf4o1c";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}`;
 
     axios.get(apiUrl).then(handleResponse);
 
